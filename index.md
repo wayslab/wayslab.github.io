@@ -5,16 +5,16 @@ aside:
 title:
 carousels:
   - images:
-    - image: /assets/images/picpic/graduation_2024.jpg
-    - image: /assets/images/picpic/graduation_2023.jpg
-    - image: /assets/images/picpic/birch_2022.jpg
-    - image: /assets/images/picpic/roshan_graduation.jpg
-    - image: /assets/images/picpic/diwali.jpg
-    - image: /assets/images/picpic/diwalifirework.jpg
-    - image: /assets/images/picpic/frisbee.jpg
-    - image: /assets/images/picpic/dinner_2022.jpg
-    - image: /assets/images/picpic/group_christmas21.jpg
-    - image: /assets/images/picpic/manibday.jpg
+    - image: 
+    - image: 
+    - image: 
+    - image: 
+    - image: 
+    - image: 
+    - image: 
+    - image: 
+    - image: 
+    - image: 
 # article_header:
 #   type: overlay
 #   theme: dark
@@ -40,7 +40,7 @@ carousels:
 <h1 class="landing-title" style="font-size: 44px; line-height: 1.15; font-weight: 700; color: #D6001C; margin: 8px 0 6px;">Wireless AI and Systems Lab</h1>
 <p class="landing-subtitle" style="font-size: 21px; line-height: 1.4; font-weight: 500; color: #4a5560; margin: 0 0 22px;">All things AI and radios from future 6G, sensing, robots, and more!</p>
 
-<p class="landing-lead">We build the next generation of wireless systems, bringing together <strong>AI</strong>, <strong>edge compute</strong>, and <strong>robotics</strong> to create networks that sense, think, and adapt in the real world. Our work spans rigorous theory to deployed prototypes, closing the loop from idea to real-world impact.</p>
+<p class="landing-lead">...</p>
 <!-- #### Mission Statement
 <!-- 
 The mission of the overall group is to solve real-world problems by first identifying the right problems to solve, then creating a theoretical model and theoretical breakthrough and practical realization of those solutions, and iterate! --> 
@@ -48,7 +48,7 @@ The mission of the overall group is to solve real-world problems by first identi
 {% include carousel.html height="50" unit="%" duration="7" number="1" %}
 <h3 class="landing-section-title">Research Overview</h3>
 
-<p class="landing-body">WCSNG designs sensing, communication, and networking technologies for robots, autonomous systems, and everyday devices. Increasingly, our research lives at the intersection of wireless and AI: real-time edge compute and machine learning that put intelligence <em>inside</em> the network, from RAN intelligent controllers and learned signal processing to perception and autonomy on robots. We take each idea from a working prototype to a theoretical model and breakthrough, then to practical realization and real-world deployment, and iterate.</p>
+<p class="landing-body">....</p>
 
 <h3 class="landing-section-title">Key Research Areas</h3>
 

@@ -1,38 +1,126 @@
-# New Markdown file format
+# How to Add a Publication
 
-##
+Publication pages are created from Markdown files in this directory. Jekyll uses
+the date in the filename to sort the publication list.
 
-* ```title```: paper/project title **"Required"**
-* ```short_title```: one word short decription **"Required"**
-* ```tags```: what publication catgeory does the project belong to (Backscatter/Wireless Sensign etc, check publication webpage) **"Required"**
-* ```cover```: cover image to display iff there is no video. If there is video, the main display will have the video instead.
-* ```authors```: string list of all authors, this is needed for publications/ where a short string describes authors. **"Required"**
-* ```author_list```: a nested YAML variable to help render the new template **Not Required, but recommended**
-  - ```name```: needed, include a ```*``` if need to show equal contribution
-  - ```url```: optional
-  - ```enail```: needed
-* ```eqcon```: set to ```true``` if there is equal contrib in the author list **Not Required, but recommended**
-* ```conference```: string describing conference/journal/workshop etc **Required**
-* ```conference_site```: url for the conference/journal/workshop etc **Not Required, but recommended**
-* ```paper```: url linking to paper pdf **Required**
-* ```video```: url linking to video **Not Required, but recommended**, Although it says video, its just a hyperlink and can point to slides pdf as well
-* ```video_str```: video text decription (is it demo? talk? pitch?) **Not Required** if this is not supplied, but video url is included, the text rendered would be simply "Video"
-* ```miscs```: a nested YAML variable to add any more links  **Not Required, but recommended**
-  -  ```content_type```: what is the content? (is it demo? talk? pitch? proof? suppl. material?)
-  - ```content_url```: url to point to the content
-* ```description```: a nested YAML variable to add any extra description  **Not Required, but recommended**
-  - ```title```: string to describe the content (eg. Key Idea, Contribution, What is purpose of project etc)
-  - ```text```: wall of text as a string to describe the title
-  - ```image```: image to add to the content block
-  - ```image_width```: in px, if not supplied default width is 600 px
-For description, all the three are optional, in the sense that content block can be just title+image, title+text, text+image, only image, only text etc this all is flexible
-* ```medias```: a nested YAML variable to add media coverage **Not Required, but recommended**
-  -  ```type```: where is it published? (Techcrunch/HAckstter, or any description you would want)
-  - ```url```: url to point to the content
-* ```citation```: a nested YAML variable to add citation block towards the end **Not Required, but recommended**
-  - ```text```: bibtext/short cite text for the paper
-  - ```thumbnail```: any thumbnail you would want to include
-  - ```bib```: **Not working right now, Ignore**
-  - ```biburl```: url pointing to bibtext
-  - ```links```: Nested YAML paramater to add any extra links (Arxiv version, slides etc etc)
+## 1. Create the file
 
+Use this filename format:
+
+```text
+YYYY-MM-DD-short-name.md
+```
+
+For example:
+
+```text
+2026-08-21-example-paper.md
+```
+
+Use a unique date and a short, readable name. Keep the file extension as `.md`.
+
+## 2. Add the front matter
+
+Start the file with YAML front matter between two `---` lines:
+
+```yaml
+---
+layout: publication
+title: "Full Paper Title"
+short_title: "Short Name"
+tags: Communications Wireless-Sensing
+cover: /assets/images/pubpic/example-cover.png
+authors: "First Author, Second Author, and Dinesh Bharadia"
+conference: "ACM MobiCom 2026"
+conference_site: https://example.org/conference
+paper: /files/example-paper.pdf
+slides: /files/example-slides.pdf
+github: https://github.com/example/repository
+video: https://www.youtube.com/embed/example-id
+video_str: Demo
+miscs:
+  - content_type: Dataset
+    content_url: https://example.org/dataset
+highlight: false
+---
+```
+
+Required fields:
+
+- `layout`: Use `publication`.
+- `title`: Full publication title.
+- `short_title`: Short name used in list views.
+- `tags`: Space-separated research tags. Match existing tag spelling.
+- `cover`: Image path used on publication lists.
+- `authors`: Author names as one comma-separated string.
+- `conference`: Conference, journal, or workshop name.
+- `paper`: Link to the paper PDF.
+
+## 3. Add files
+
+Store papers, slides, posters, and supplementary material in `/files`. Store
+publication cover images in `/assets/images/pubpic`.
+
+Use site-relative paths beginning with `/`:
+
+```yaml
+paper: /files/example-paper.pdf
+slides: /files/example-slides.pdf
+cover: /assets/images/pubpic/example-cover.png
+```
+
+External links can use full `https://` URLs.
+
+## 4. Add code and datasets
+
+Use `github` for an open-source repository:
+
+```yaml
+github: https://github.com/organization/repository
+```
+
+Use `miscs` for a dataset or other extra link. The `content_type` becomes the
+link label shown on the publication page:
+
+```yaml
+miscs:
+  - content_type: Dataset
+    content_url: https://example.org/dataset
+  - content_type: Supplementary Material
+    content_url: /files/example-supplement.pdf
+```
+
+Do not use `osd` as a link. It is only descriptive text and does not create a
+GitHub or Dataset button in the current publication layout.
+
+## 5. Add the abstract
+
+After the closing `---`, add the publication content. The abstract is normally
+provided through the `description` field:
+
+```yaml
+description:
+  - title: Abstract
+    text: "Write the abstract here."
+```
+
+Do not add a second `Abstract` heading in the Markdown body. The publication
+layout adds that heading automatically. Additional Markdown content can be
+placed below the front matter when needed.
+
+## 6. Check the result
+
+Build or serve the site locally:
+
+```bash
+bundle exec jekyll serve
+```
+
+Open the publication list at `/publications/`, then open the new publication
+and check its paper, code, dataset, image, and other links.
+
+## Removing or updating a publication
+
+Edit or delete the corresponding Markdown file in `_posts/`. Also remove any
+unused PDFs from `/files` and cover images from `/assets/images/pubpic` after
+confirming that no other page uses them.

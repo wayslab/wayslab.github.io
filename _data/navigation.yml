@@ -116,28 +116,11 @@ header:
     url: /code/
 
   - titles:
-      en : &EN Hosted Events
-    subfolderitems:
-      - name: Mobicom'26 Open-AI RAN
-        url: https://wcsng.ucsd.edu/open-ai-ran-2026/
-      - name: Mobicom'25 Open-AI RAN
-        url: https://wcsng.ucsd.edu/open-ai-ran-2025/
-      - name: Mobicom'24 Open-AI RAN
-        url: https://wcsng.ucsd.edu/open-ai-ran-2024/
-      - name: Mobicom'23 mmNets
-        url: https://wcsng.ucsd.edu/mmNets2023/
-      - name: Mobicom'23 S<sup>3</sup>
-        url: https://wcsng.ucsd.edu/s3/
-      - name: CVPR'22 WAIP
-        url: https://wcsng.ucsd.edu/waip/
-      - name: BluBLE
-        url: https://wcsng.ucsd.edu/bluble/
-  - titles:
-      en : &EN Life@WCSNG
+      en : &EN Life@WAYS
     subfolderitems:
       - name: Docs
-        url: https://wcsng.ucsd.edu/docs/
+        url: 
       - name: Pics!
-        url: /pictures
+        url: 
       - name: Join Us!
-        url: https://wcsng.ucsd.edu/vacancies.html
+        url:
