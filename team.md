@@ -113,21 +113,25 @@ permalink: team/
 
 
 <div class="article-list grid grid--sm grid--p-3">
-  <div class="cell cell--12 cell--md-4 cell--lg-3">
-    <div class="card card--flat">
-      <a class="card__link" href="https://dineshb-ucsd.github.io/">
-      <div class="card__image">
-        <img class="image" src="" />
+  {% for people in site.data.people %}
+    {% if people.role == "Principal Investigator" %}
+      <div class="cell cell--12 cell--md-4 cell--lg-3">
+        <div class="card card--flat">
+          {% if people.website %}<a class="card__link" href="{{ people.website }}">{% endif %}
+          <div class="card__image">
+            <img class="image" src="{{ people.picture }}" alt="Profile image of {{ people.name }}" />
             <div class="overlay overlay--bottom">
               <header>
-                <p class="member-name">Ish Jain</p>
-                <p><i>Principal Investigator, Assistant Professor ECE</i></p>
+                <p class="member-name">{{ people.name }}</p>
+                <p><i>{{ people.role }}</i></p>
               </header>
             </div>
+          </div>
+          {% if people.website %}</a>{% endif %}
+        </div>
       </div>
-      </a>
-    </div>
-  </div>
+    {% endif %}
+  {% endfor %}
 </div>
 
 
@@ -157,7 +161,7 @@ permalink: team/
 
 <div class="article-list grid grid--sm grid--p-3">
 {% for people in site.data.people %}
-  {% if people.role != "PhD" and people.role != "Principal Investigator" %}
+  {% if people.role != "PhD" and people.role != "MS" and people.role != "BS" and people.role != "Principal Investigator" %}
    <div class="cell cell--12 cell--md-4 cell--lg-3">
       <div class="card card--flat">
         {% if people.website %}<a class="card__link" href="{{ people.website }}">{% endif %}
@@ -180,6 +184,27 @@ permalink: team/
 
 <div>
   <h3>Masters Students</h3>
+  <div class="article-list grid grid--sm grid--p-3">
+    {% for people in site.data.people %}
+      {% if people.role == "MS" %}
+        <div class="cell cell--12 cell--md-4 cell--lg-3">
+          <div class="card card--flat">
+            {% if people.website %}<a class="card__link" href="{{ people.website }}">{% endif %}
+            <div class="card__image">
+              <img class="image" src="{{ people.picture }}" alt="Profile image of {{ people.name }}" />
+              <div class="overlay overlay--bottom">
+                <header>
+                  <p class="member-name">{{ people.name }}</p>
+                  <p><i>{{ people.role }}</i></p>
+                </header>
+              </div>
+            </div>
+            {% if people.website %}</a>{% endif %}
+          </div>
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
   <div class="row">
     <div class="column">
       {% for people in site.data.people_text %}
@@ -201,6 +226,27 @@ permalink: team/
     </div>
   </div>
   <h3>Undergraduate Students</h3>
+  <div class="article-list grid grid--sm grid--p-3">
+    {% for people in site.data.people %}
+      {% if people.role == "BS" %}
+        <div class="cell cell--12 cell--md-4 cell--lg-3">
+          <div class="card card--flat">
+            {% if people.website %}<a class="card__link" href="{{ people.website }}">{% endif %}
+            <div class="card__image">
+              <img class="image" src="{{ people.picture }}" alt="Profile image of {{ people.name }}" />
+              <div class="overlay overlay--bottom">
+                <header>
+                  <p class="member-name">{{ people.name }}</p>
+                  <p><i>{{ people.role }}</i></p>
+                </header>
+              </div>
+            </div>
+            {% if people.website %}</a>{% endif %}
+          </div>
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
   <div class="row">
     <div class="column">
       {% for people in site.data.people_text %}
@@ -222,7 +268,29 @@ permalink: team/
     </div>
   </div>
 <h3>Alumni</h3>
-<h4>PhD</h4>
-<div class="article-list grid grid--sm grid--p-3">
-  {% assign alumni_with_pics = site.data.alumni | where_exp: "item", "item.picture" %}
-  {% assign alumni_without_pics = site.data.alumni | where_exp: "item", "item.picture == nil" %}
+<div class="row">
+  <div class="column">
+    {% for people in site.data.alumni %}
+      {% if people.col == 1 %}
+        <p style="line-height: 150%">
+          {% if people.website %}<a href="{{ people.website }}">{% endif %}
+          {{ people.name }}
+          {% if people.website %}</a>{% endif %}<br />
+          <i>Class of {{ people.year }}{% if people.now %}, {{ people.now }}{% endif %}</i>
+        </p>
+      {% endif %}
+    {% endfor %}
+  </div>
+  <div class="column">
+    {% for people in site.data.alumni %}
+      {% if people.col == 2 %}
+        <p style="line-height: 150%">
+          {% if people.website %}<a href="{{ people.website }}">{% endif %}
+          {{ people.name }}
+          {% if people.website %}</a>{% endif %}<br />
+          <i>Class of {{ people.year }}{% if people.now %}, {{ people.now }}{% endif %}</i>
+        </p>
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>

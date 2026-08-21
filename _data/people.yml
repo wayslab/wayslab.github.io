@@ -1,9 +1,13 @@
 - name: Ish Jain
   role: Principal Investigator
-  picture: /assets/images/teampic/dinesh.jpg
-  website: https://dineshb-ucsd.github.io
+  picture: /assets/images/teampic/ish.jpg
+  website: https://ishjain.github.io/
 
 - name: Andrew Nguyen
   role: PhD
   picture: /assets/images/teampic/andrew_nguyen.jpg
+
+- name: Hung Xuan (Simon) Ngo
+  role: BS
+  picture: /assets/images/teampic/simon_ngo.jpg
 
