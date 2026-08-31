@@ -94,7 +94,15 @@
 .card--flat {
   @include box-shadow(0);
   .card__image {
+    height: 260px;
+    overflow: hidden;
+    border-radius: map.get($base, border-radius);
+
     & > img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
       border-radius: map.get($base, border-radius);
     }
   }
