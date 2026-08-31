@@ -1,10 +1,11 @@
+@use "sass:map";
 .header {
   position: relative;
   width: 100%;
   z-index: 1;
   background: $header-background;
   a {
-    font-weight: map-get($base, font-weight);
+    font-weight: map.get($base, font-weight);
     text-decoration: none !important;
     @include link-colors($header-text-color, $main-color-1);
   }
@@ -12,7 +13,7 @@
     @include flexbox();
     @include media-breakpoint-down(mdplus) {
       @include flex-direction(column);
-      padding: map-get($spacers, 2);
+      padding: map.get($spacers, 2);
     }
   }
 }
@@ -42,8 +43,8 @@
   @include align-items(center);
   @include flex-wrap(nowrap);
   @include flex(1);
-  height: map-get($layout, header-height);
-  margin-right: map-get($spacers, 3);
+  height: map.get($layout, header-height);
+  margin-right: map.get($spacers, 3);
   white-space: nowrap;
   @include media-breakpoint-down(md) {
     height: auto;
@@ -52,12 +53,12 @@
   & > .header__brand {
     @include flex(1);
     @include media-breakpoint-down(md) {
-      height: map-get($layout, header-height-sm);
+      height: map.get($layout, header-height-sm);
     }
   }
   & > .search-button {
     display: none;
-    margin-left: map-get($spacers, 2);
+    margin-left: map.get($spacers, 2);
     @include media-breakpoint-down(md) {
       @include flexbox();
     }
@@ -69,20 +70,20 @@
   @include align-items(center);
   & > svg {
     overflow: visible;
-    width: map-get($base, font-size-h4) * 1.6;
-    height: map-get($base, font-size-h4) * 1.6;
-    margin-right: map-get($spacers, 3);
+    width: map.get($base, font-size-h4) * 1.6;
+    height: map.get($base, font-size-h4) * 1.6;
+    margin-right: map.get($spacers, 3);
     vertical-align: middle;
     @include media-breakpoint-down(md) {
-      width: map-get($base, font-size-h4) * 1.2;
-      height: map-get($base, font-size-h4) * 1.2;
+      width: map.get($base, font-size-h4) * 1.2;
+      height: map.get($base, font-size-h4) * 1.2;
     }
   }
   & > a {
     display: inline-block;
-    font-size: map-get($base, font-size-h4);
+    font-size: map.get($base, font-size-h4);
     @include media-breakpoint-down(md) {
-      font-size: map-get($base, font-size-h4-small);
+      font-size: map.get($base, font-size-h4-small);
     }
   }
 }
@@ -97,7 +98,7 @@
   }
 
   & > ul {
-    height: map-get($layout, header-height);
+    height: map.get($layout, header-height);
     padding-bottom: 0;
     margin: 0;
 
@@ -280,8 +281,8 @@
 }
 
 .navigation ul li a span {
-  margin-left: map-get($spacers, 2);
-  font-size: map-get($base, font-size-h6);
+  margin-left: map.get($spacers, 2);
+  font-size: map.get($base, font-size-h6);
 }
 
 .nav-bar-toggle {

@@ -1,15 +1,15 @@
 ---
 layout: research
 permalink: wireless-sensing
-heading: Wireless Sensing
-pubtag: Wireless-Sensing
+heading: ISAC
+pubtag: ISAC
 carousels:
   - images:
     - image: 
     - image:
     - image:
 people:
-  - Ish Kumar Jain
+  - Ish Jain
   - Andrew Nguyen
 ---
 

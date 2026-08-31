@@ -24,16 +24,16 @@ header:
       tr      : &TR       Hakkında
       # @end locale config
     subfolderitems:
-      - name: "Wireless Sensing"
+      - name: "ISAC"
         url: /wireless-sensing.html
-      - name: "Towards 6G"
-        url: /communication.html
-      - name: "Ubiquitous IoT"
-        url: /ubiquitousIoT.html
-      - name: "Spectrum Sensing"
-        url: /spectrum_sensing.html
-      - name: "Autonomous Vehicles"
-        url: /vehicular.html
+      - name: "Artificial Intelligence"
+        url: /AI.html
+      - name: "IoT"
+        url: /iot.html
+      - name: "6G mmWave"
+        url: /6g.html
+      - name: "O-RAN"
+        url: /oran.html
       - name: "Security and Privacy"
         url: /privacy.html
 
@@ -123,4 +123,4 @@ header:
       - name: Pics!
         url: /pictures/
       - name: Join Us!
-        url:
+        url: https://ishjain.github.io/assets/docs/Ish_Jain_hiring_PhD_at_RPI.pdf

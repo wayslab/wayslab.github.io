@@ -1,13 +1,14 @@
 ---
 layout: research
-permalink: vehicular
-heading: Reliable Autonomous Systems
-pubtag: Vehicle
+permalink: oran
+heading: O-RAN
+pubtag: oran
 carousels:
   - images:
     - image:
 people: 
-  - 
+  - Ish Jain
+  - Andrew Nguyen
 ---
 
 Description

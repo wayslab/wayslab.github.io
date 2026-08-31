@@ -24,6 +24,10 @@ permalink: team/
   .card.card--flat {
     position: relative;
     overflow: hidden;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
     border-radius: 14px;
     background: #fff;
     box-shadow: 0 6px 18px rgba(24, 43, 73, 0.12);
@@ -42,17 +46,31 @@ permalink: team/
     text-decoration: none !important;
   }
 
+  .article-list.grid {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+  }
+
+  .article-list.grid > .cell {
+    display: flex;
+  }
+
   .card__image {
     position: relative;
     overflow: hidden;
+    width: 100%;
+    height: 260px;
+    flex-shrink: 0;
   }
   .card__image img,
   .card__image .image {
     width: 100%;
-    height: 260px;
+    height: 100%;
     object-fit: cover;
-    object-position: top center;
+    object-position: center center;
     display: block;
+    background: #e7edf5;
     transition: transform 0.35s ease;
   }
   .card.card--flat:hover .card__image img {
@@ -70,6 +88,7 @@ permalink: team/
     left: 0;
     width: 100%;
     background: linear-gradient(to top, rgba(10, 18, 33, 0.92) 0%, rgba(10, 18, 33, 0.55) 52%, rgba(10, 18, 33, 0) 100%);
+    pointer-events: none;
   }
   .member-name {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;

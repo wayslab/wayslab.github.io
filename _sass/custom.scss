@@ -1,3 +1,4 @@
+@use "sass:map";
 /* start custom scss snippet */
 
 $news-navy: #182B49;
@@ -343,7 +344,7 @@ $landing-font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, H
 }
 
 .news-sidebar-link {
-  padding-right: map-get($spacers, 2);
+  padding-right: map.get($spacers, 2);
   position: absolute;
   right: 0;
 

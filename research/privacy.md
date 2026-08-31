@@ -7,6 +7,7 @@ carousels:
   - images:
     - image: 
 people:
+  - Ish Jain
 ---
 
 Description

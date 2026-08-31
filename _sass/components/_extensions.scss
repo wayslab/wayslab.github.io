@@ -1,5 +1,6 @@
+@use "sass:map";
 .extensions {
-  margin: map-get($spacers, 3) 0;
+  margin: map.get($spacers, 3) 0;
   @extend .d-print-none;
 }
 

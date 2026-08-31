@@ -1,8 +1,8 @@
 ---
 layout: research
-permalink: communication
-heading: Towards xG
-pubtag: Communications
+permalink: AI
+heading: AI
+pubtag: AI
 carousels:
   - images:
     - image: /assets/images/wireless1.jpg
@@ -13,6 +13,7 @@ carousels:
     - image: 
     - image: 
 people:
+  - Ish Jain
   - Andrew Nguyen
 ---
 Description
