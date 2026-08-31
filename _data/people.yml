@@ -9,13 +9,13 @@
   role: PhD
   picture: /assets/images/teampic/andrew_nguyen.jpg
 
-- name: Raj Bakhunchhe
-  role: PhD
-  picture:
-
 - name: Swastik Kanjilal
   role: PhD
-  picture: 
+  picture: /assets/images/teampic/swastik_kanjilal.jpg
+
+- name: Raj Bakhunchhe 
+  role: PhD
+  picture: /assets/images/teampic/raj.jpg
 
 #Master
 - name: Adithya Vijayan

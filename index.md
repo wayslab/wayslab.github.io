@@ -56,7 +56,7 @@ The mission of the overall group is to solve real-world problems by first identi
     <span class="research-card__desc">Joint communication and sensing for intelligent wireless perception</span>
   </a>
   <a class="research-card" href="/AI.html">
-    <span class="research-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="10" x2="12" y2="21"/><path d="M9 21h6"/><path d="M7.6 8.4a4 4 0 0 1 8.8 0"/><path d="M5 6a7 7 0 0 1 14 0"/><circle cx="12" cy="9" r="1.3"/></svg></span>
+    <span class="research-card__icon" style="font-size: 1.2rem; font-weight: 700; letter-spacing: 0.08em;">AI</span>
     <span class="research-card__title">Artificial Intelligence</span>
     <span class="research-card__desc">AI-driven intelligence for adaptive wireless networks</span>
   </a>
