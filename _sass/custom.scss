@@ -362,17 +362,32 @@ $landing-font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, H
 }
 
 #research-bar {
-  width: 100%;
-  overflow: hidden;
-  border-radius: 10px;
-
-  .navigation__item {
-    @include media-breakpoint-down(lg) {
-      min-width: 92px;
-      padding: 8px 10px !important;
-      font-size: 0.62rem !important;
-      line-height: 1.02 !important;
+  &.collapsed {
+    &>.research-bar {
+      @include media-breakpoint-down(lg) {
+        display: none;
+      }
     }
+  }
+}
+
+.research-bar-toggle {
+  display: block;
+  color: #fff;
+
+  @include flexbox();
+
+  &>span>svg {
+    color: #fff;
+    scale: 1.5;
+  }
+
+  &>span {
+    padding: 0.5rem 0.5rem;
+  }
+
+  @include media-breakpoint-up(lg) {
+    display: none;
   }
 }
 
@@ -381,20 +396,8 @@ $landing-font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, H
   @include align-items(center);
 
   @include media-breakpoint-down(lg) {
-    display: flex !important;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    overflow-y: hidden;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-    gap: 0;
-    scroll-snap-type: x proximity;
-    min-width: 0;
-    width: max-content;
-    min-width: 100%;
-    background: rgba(255, 255, 255, 0.04);
-    border-radius: 10px;
+    @include menu(0, 2, nowrap);
+    @include menu-direction("vertical");
   }
 
   @include media-breakpoint-up(lg) {
@@ -406,47 +409,11 @@ $landing-font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, H
 
   @include media-breakpoint-down(md) {
     padding-bottom: 4px;
-    margin: 0;
+    margin: -4px 0 0 0;
   }
 
   @include align-items(center);
   @include justify-content(center);
-}
-
-.research-bar::-webkit-scrollbar {
-  display: none;
-}
-
-@media (max-width: 767px) {
-  #research-bar {
-    overflow-x: auto;
-    scrollbar-width: none;
-  }
-
-  #research-bar::-webkit-scrollbar {
-    display: none;
-  }
-
-  .research-bar {
-    width: max-content;
-    min-width: 100%;
-    display: flex !important;
-    flex-wrap: nowrap !important;
-  }
-
-  .navigation__item {
-    flex: 0 0 auto;
-    min-width: 76px;
-    padding: 10px 8px !important;
-    white-space: nowrap;
-    scroll-snap-align: start;
-  }
-
-  .navigation__item a {
-    font-size: 0.56rem;
-    line-height: 1.05;
-    letter-spacing: -0.02em;
-  }
 }
 
 /* end custom scss snippet */
