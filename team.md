@@ -138,7 +138,7 @@ permalink: team/
         <div class="card card--flat">
           {% if people.website %}<a class="card__link" href="{{ people.website }}">{% endif %}
           <div class="card__image">
-            <img class="image" src="{{ people.picture }}" alt="Profile image of {{ people.name }}" />
+            <img class="image" src="{{ people.picture | default: '/assets/images/teampic/default_avatar.svg' }}" alt="{{ people.name }}" />
             <div class="overlay overlay--bottom">
               <header>
                 <p class="member-name">{{ people.name }}</p>
@@ -162,7 +162,7 @@ permalink: team/
         <div class="card card--flat">
           {% if people.website %}<a class="card__link" href="{{ people.website }}">{% endif %}
           <div class="card__image">
-                <img class="image" src="{{ people.picture }}" alt="Profile image of {{ people.name }}" />
+                <img class="image" src="{{ people.picture | default: '/assets/images/teampic/default_avatar.svg' }}" alt="{{ people.name }}" />
             <div class="overlay overlay--bottom">
               <header>
                 <p class="member-name">{{ people.name }}</p>
@@ -185,7 +185,7 @@ permalink: team/
       <div class="card card--flat">
         {% if people.website %}<a class="card__link" href="{{ people.website }}">{% endif %}
         <div class="card__image">
-            <img class="image" src="{{ people.picture }}" alt="Profile image of {{ people.name }}" />
+            <img class="image" src="{{ people.picture | default: '/assets/images/teampic/default_avatar.svg' }}" alt="{{ people.name }}" />
           <div class="overlay overlay--bottom">
             <header>
               <p class="member-name">{{ people.name }}</p>
@@ -210,7 +210,7 @@ permalink: team/
           <div class="card card--flat">
             {% if people.website %}<a class="card__link" href="{{ people.website }}">{% endif %}
             <div class="card__image">
-              <img class="image" src="{{ people.picture }}" alt="Profile image of {{ people.name }}" />
+              <img class="image" src="{{ people.picture | default: '/assets/images/teampic/default_avatar.svg' }}" alt="{{ people.name }}" />
               <div class="overlay overlay--bottom">
                 <header>
                   <p class="member-name">{{ people.name }}</p>
@@ -252,7 +252,7 @@ permalink: team/
           <div class="card card--flat">
             {% if people.website %}<a class="card__link" href="{{ people.website }}">{% endif %}
             <div class="card__image">
-              <img class="image" src="{{ people.picture }}" alt="Profile image of {{ people.name }}" />
+              <img class="image" src="{{ people.picture | default: '/assets/images/teampic/default_avatar.svg' }}" alt="{{ people.name }}" />
               <div class="overlay overlay--bottom">
                 <header>
                   <p class="member-name">{{ people.name }}</p>

@@ -4,12 +4,15 @@ title: "TrackLink: Enabling Near-Field Beamfocusing and MIMO for Fast Moving LEO
 short_title: "TrackLink"
 tags: Communications
 cover: /assets/images/pubpic/tracklink_cover.png
-authors: "Ish Kumar Jain"
+authors: "Rohith Reddy Vennam, Eric Xiang, Dinesh Bharadia, and Ish Kumar Jain"
 author_list:
+    - name: Rohith Reddy Vennam
+    - name: Eric Xiang
+    - name: Dinesh Bharadia
     - name: Ish Kumar Jain
       email: jaini@rpi.edu
 eqcon: false
-conference: "IEEE INFOCOM 2027"
+conference: "Under submission to INFOCOM '27"
 paper: /files/tracklink_infocom27.pdf
 description:
     - title: Abstract
