@@ -5,6 +5,10 @@
 
 #PHD
 
+- name: Eric Xiang
+  role: PhD
+  picture: 
+
 - name: Andrew Nguyen
   role: PhD
   picture: /assets/images/teampic/andrew_nguyen.jpg
@@ -17,12 +21,17 @@
   role: PhD
   picture: /assets/images/teampic/raj.jpg
 
+
 #Master
 - name: Adithya Vijayan
   role: MS
   picture: 
 
 #BS
+
+- name: Timur Bolukbas
+  role: BS
+  picture: 
 
 - name: Hung Xuan (Simon) Ngo
   role: BS
