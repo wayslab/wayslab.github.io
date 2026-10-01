@@ -4,7 +4,8 @@ title: "CellSense: A Sub-6 GHz Cellular ISAC System for Clutter-Robust Passive S
 short_title: "CellSense"
 tags: ISAC 6g
 authors: "Bibhor Kumar, Ish Kumar Jain, Vijay K. Shah"
-disp_cover: "False"
+cover: /assets/images/pubpic/cellsense_cover.png
+disp_cover: "True"
 # needed for publications/
 author_list:
     - name: Bibhor Kumar
